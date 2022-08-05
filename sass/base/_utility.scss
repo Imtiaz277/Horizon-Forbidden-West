@@ -1,0 +1,31 @@
+.u-center-text{text-align: center;}
+
+.u-margin-bottom-small{margin-bottom: $small;}
+.u-margin-bottom-medium{margin-bottom: $medium;}
+.u-margin-bottom-big{margin-bottom: $big;}
+.u-margin-bottom-huge{margin-bottom: $huge;}
+
+.u-margin-top-small{margin-top: $small;}
+.u-margin-top-medium{margin-top: $medium;}
+.u-margin-top-big{margin-top: $big;}
+.u-margin-top-huge{margin-top: $huge;}
+
+.u-margin-x-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.u-padding-small{padding: $small;}
+.u-padding-medium{padding: $medium}
+.u-padding-big{padding: $big;}
+.u-padding-huge{padding: $huge}
+
+.u-padding-y-small{padding: $small 0;}
+.u-padding-y-medium{padding: $medium 0;}
+.u-padding-y-big{padding: $big 0;}
+.u-padding-y-huge{padding: $huge 0;}
+
+.u-position-relative{position: relative;}
+.u-display-inline-block{display: inline-block;}
+
+.u-grab-cursor{cursor: -webkit-grab;cursor: grab;}

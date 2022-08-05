@@ -1,0 +1,84 @@
+.character{
+    width: 120rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+    background-color: rgba($color-black, 0.8);
+    border-radius: 1rem;
+
+    @include respond(tab-land){ flex-direction: column; }
+
+    &__thumbnail{
+        flex: 0 0 20%;
+        
+        @include respond(tab-land){ 
+            flex: none;
+            height: 100rem; 
+        }
+
+        img{ 
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem;
+            -o-object-fit: cover;
+               object-fit: cover;
+            -o-object-position: center;
+               object-position: center; 
+            transition: transform 0.3s; 
+            @include respond(tab-land){ -o-object-position: top; object-position: top; }
+        }
+    }
+
+    &__description{
+        flex: 0 0 80%;
+        padding: $medium;
+    }
+
+    &__name{
+        color: $color-white;
+        font-size: 5.5rem;
+        line-height: 1;
+        padding-bottom: $medium;
+        border-bottom: 0.2rem solid $color-white;
+    }
+
+    &__text-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4rem;
+        
+        @include respond(tab-land){
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    &__about{
+        flex: 0 0 45%;
+        line-height: 1.6;
+        margin-bottom: 4rem;
+    }
+    
+    &__images-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include respond(tab-land){
+            flex-wrap: wrap;
+        }
+    }
+
+    &__image{
+        flex: 0 0 30%;
+
+        @include respond(tab-land){
+            &:nth-child(1){ flex: 0 0 50%; }
+            &:nth-child(2){ flex: 0 0 50%; }
+            &:nth-child(3){ flex: 0 0 100%; }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 120rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    &:not(:last-child){ margin-bottom: $huge; }
+    @include respond(tab-port){ flex-direction: column; }
+
+    &--space-between{ justify-content: space-between; }
+
+    &--align-center{ align-items: center; }
+
+    &--reverse{
+        flex-direction: row-reverse;
+        @include respond(tab-port){ flex-direction: column;}
+    }
+
+    .col-1-2{ 
+        flex: 0 0 48%;
+        @include respond(tab-port){ 
+            &:nth-child(2){ margin-top: 2rem; }
+        } 
+    }
+}

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@300;400;500;600;700;800&display=swap');
+
+body { 
+    font-family: 'K2D', sans-serif; 
+    color: $color-black;
+    letter-spacing: 0.1rem;
+}
+
+// Heading Typography
+.heading-largest, .heading-large, .heading-big, .heading-small{
+    margin-bottom: 1rem;
+}
+
+.heading-largest{
+    font-size: $fs-largest;
+    line-height: 1;
+    @include respond(phone){
+        line-height: 1.4;
+    }
+}
+
+.heading-large{ font-size: $fs-largest; }
+
+.heading-big{ font-size: $fs-big; }
+
+.heading-medium{
+    font-size: $fs-medium;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+// To use this, the parent must be positioned
+.heading--background{
+    font-size: 8rem;
+    color: rgba($color-white, 0.1);
+    position: absolute;
+    @include respond(tab-port){
+        font-size: $fs-largest; 
+        color: rgba($color-white, 0.4);
+        background-color: rgba($color-black, 0.4);
+    }
+    @include respond(phone){ font-size: $fs-medium; }
+
+    &--top-left{
+        top: 0;
+        left: 0;
+    }
+
+    &--top-right{
+        top: 0;
+        right: 0;
+    }
+}
+
+.heading--uppercase{ text-transform: uppercase; }
+
+.heading--white{ color: $color-white; }
+
+.heading--skewX { transform: skewX(-10deg); }
+
+.heading--underline{ text-decoration: underline; }
+
+// Text Typography
+.text{
+    font-size: $fs-small;
+    font-weight: 300;
+    @include respond(phone){ font-size: $fs-medium; }
+}
+
+.text--white{ color: $color-white; }
+
+
+
+.text--justify{ 
+    text-align: justify;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+}

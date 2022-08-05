@@ -1,0 +1,56 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    text-decoration: none;
+}
+
+html {
+    
+    //This defines what 1rem is
+    font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
+
+    // //width < 1800?
+    // @include respond(big-desktop){ font-size: 80%; } //1rem = 12px; 12px/16px = 75%
+
+    // //width < 1200?
+    // @include respond(tab-land){ font-size: 56.25%; } //1rem = 9px; 9px/16px = 56.25% 
+
+    // //width < 900?
+    // @include respond(tab-port){ font-size: 50%; } //1rem = 8px; 8px/16px = 50%
+
+    // //width < 600?
+    // @include respond(phone){ font-size: 40%; } //1rem = 4.8px; 4.8px/16px = 30%
+
+    //width < 1800?
+    @include respond(big-desktop){ font-size: 80%; } //1rem = 12px; 12px/16px = 75%
+
+    //width < 1200?
+    @include respond(tab-land){ font-size: 65%; } //1rem = 9px; 9px/16px = 56.25% 
+
+    //width < 900?
+    @include respond(tab-port){ font-size: 55%; } //1rem = 8px; 8px/16px = 50%
+
+    //width < 600?
+    @include respond(phone){ font-size: 45%; } //1rem = 4.8px; 4.8px/16px = 30%
+
+    scroll-behavior: smooth;
+}
+
+body{ 
+    box-sizing: border-box; 
+    line-height: $lh-medium;
+}
+
+html, body{ overflow-x: hidden; }
+
+// This is for changing the color when the user highlights the text.
+//Default is light blue and white
+::-moz-selection{
+    background-color: $color-light-blue;
+    color: $color-black;
+}
+::selection{
+    background-color: $color-light-blue;
+    color: $color-black;
+}

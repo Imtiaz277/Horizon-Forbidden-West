@@ -1,0 +1,70 @@
+.btn{
+    cursor: pointer;
+    background-color: $color-white;
+    border: none;
+    border-radius: 100px;
+    color: $color-black;
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.3s;
+    @include respond (tab-port){ padding: 1.5rem 2.5rem; }
+
+    &:hover{
+        background-color: lightgray;
+    }
+
+    &__text{
+        font-family: 'K2D', sans-serif; ;
+        font-size: $fs-small;
+        font-weight: 800;
+        z-index: inherit;
+        @include respond (tab-port){ font-size: $fs-medium; }
+    }
+
+    &__icon{
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: 0.5rem;
+        z-index: inherit;
+        @include respond (tab-port){ 
+            margin-left: 1rem;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    &--animation-pulse::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        background-color: $color-white;
+        z-index: 1;
+        -webkit-animation: puff-out-center 5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 5s infinite forwards;
+	    animation: puff-out-center 5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 5s infinite forwards;
+    }
+
+    &--center-sm{
+        @include respond (tab-port){ 
+            margin-left: auto;
+            margin-right: auto; 
+        } 
+    }
+
+    &--orange{
+        color: $color-white;
+        background-color: #d63d00;
+        text-align: center;
+        font-size: $fs-small;
+
+        &:hover{
+            background-color: rgb(156, 58, 20)
+        }
+    }
+}
